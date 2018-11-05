@@ -64,7 +64,7 @@ def removeUselessSpace(term):
 	"""去除标点符号两侧的空格; 去掉[英文数字]和[汉字]之间的空白符; 连续多个空白符, 变为1个
 	"""
 	term = re.sub('\s*([{cnsPunc}{engPunc}]+)\s*'.format(cnsPunc=hanzi.punctuation, engPunc=string.punctuation), '\g<1>', term)
-	term = re.sub('\s*([\u4e00-\u9fff]+)\s*'.format(cnsInvalid=hanzi.punctuation, engInvalid=string.punctuation), '\g<1>', term)
+	term = re.sub('\s*([\u4e00-\u9fff]+)\s*', '\g<1>', term)
 	term = re.sub('\s{2,}', ' ', term)
 	return term
 
