@@ -14,7 +14,7 @@
 ## 来自UMLS翻译（主要为机器翻译）的词表
 `result/segment/umls`文件夹下（根据质量从高到低进行排序）：
 
-- `umls_iciba.txt`：来自金山词霸的带`[医]`字标签的翻译
+- `umls_iciba.txt`：来自金山词霸的带`[医]`等标签的翻译
 - `umls_bgequal_baike.txt`：来自百度翻译与谷歌翻译**无序相等且包含中文**的词条，且被[百度百科](https://baike.baidu.com/)或[维基百科](https://zh.wikipedia.org/)所收录
 - `umls_bgequal.txt`：来自百度翻译与谷歌翻译**无序相等且包含中文**的词条
 - `umls_baike.txt`：来自UMLS的翻译词条，且被[百度百科](https://baike.baidu.com/)或[维基百科](https://zh.wikipedia.org/)所收录
