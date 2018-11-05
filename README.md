@@ -68,7 +68,7 @@ cd code
 export PYTHONPATH=`pwd`:$PYTHONPATH
 python segment/hpo.py
 ```
-## 可能需要安装的python包
+# 可能需要安装的python包
 ```
 pip install tqdm
 pip install seaborn
