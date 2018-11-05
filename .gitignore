@@ -1,0 +1,8 @@
+.DS_Store
+.idea/
+data
+result
+exclude.txt
+rsyncFromServer.sh
+rsyncToServer.sh
+serverExclude.txt
