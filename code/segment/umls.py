@@ -136,10 +136,10 @@ if __name__ == '__main__':
 
 	# genAllTermList()
 	# umlsSegmentScript()
-	# statScript()
+	statScript()
 	# baiduBaikeScript()
-	wikiPediaScript()
-	baikeScript()
+	# wikiPediaScript()
+	# baikeScript()
 
 
 

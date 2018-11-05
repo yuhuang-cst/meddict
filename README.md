@@ -21,7 +21,7 @@
 - `umls.txt`：来自UMLS的翻译词条，有待进一步挖掘
 
 ## 整合词表
-`result/segment/all`文件夹下：
+`result/segment/combine`文件夹下：
 
 - `meddict_human.txt`：整合上述所有来自人工翻译的词表
 - `meddict_human_machine.txt`：整合以下词表

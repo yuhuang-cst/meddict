@@ -6,3 +6,5 @@ exclude.txt
 rsyncFromServer.sh
 rsyncToServer.sh
 serverExclude.txt
+*__pycache__
+*.pyc
