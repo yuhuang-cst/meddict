@@ -4,7 +4,15 @@
 @author: hy
 """
 
+from common import printAtFixPos
+
 def readMRCONSO_RRF(path):
+	"""
+	Args:
+		path (str): .RRF
+	Returns:
+		list: [rowItem, ...]; rowItem={'CUI': CUI, 'LAT': LAT, ...}
+	"""
 	colNames = ['CUI', 'LAT', 'TS', 'LUI', 'STT', 'SUI', 'ISPREF', 'AUI', 'SAUI', 'SCUI', 'SDUI', 'SAB', 'TTY', 'CODE', 'STR', 'SRL', 'SUPPRESS', 'CVF']
 	colNum = len(colNames)
 	list = []
@@ -15,11 +23,17 @@ def readMRCONSO_RRF(path):
 		list.append({colNames[i]:valueList[i] for i in range(colNum)})
 		count += 1
 		if count % 100000 == 0:
-			print(count, 'terms read')
+			printAtFixPos('UMLS RRF READ: {}'.format(count))
 	return list
 
 
 def readUMLS_ENG(path):
+	"""
+	Args:
+		path (str): .RRF
+	Returns:
+		list: [rowItem, ...]; rowItem={'CUI': CUI, 'LAT': LAT, ...}
+	"""
 	dataList = readMRCONSO_RRF(path)
 	return [termDict for termDict in dataList if termDict['LAT'] == 'ENG']
 

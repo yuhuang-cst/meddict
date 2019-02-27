@@ -6,8 +6,8 @@
 
 from tqdm import tqdm
 import re
-from segment.tool import removeBracket, uniqueList, sortedByLength, removeBeginEnd, isCNS, allDigit
-from segment.tool import removeStopwords, removeUselessSpace, containPunc, containUselessDigitTerm
+from common import removeBracket, uniqueList, sortedByLength, removeBeginEnd, isCNS, allDigit
+from common import removeStopwords, removeUselessSpace, containPunc, containUselessDigitTerm
 
 def genSegmentTermList(termList):
 	termList = uniqueList([removeUselessSpace(term) for term in termList]) # 去除无用空白符

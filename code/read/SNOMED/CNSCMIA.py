@@ -9,8 +9,8 @@ def splitString(str, sep, times):
 
 def readSNOMED_CNSCMIA_TXT(path):
 	"""
-	Args:
-		dict: {}
+	Returns:
+		dict: {code: [{'eng': engTerm1, 'cns': cnsTerm1}]}
 	"""
 	import re
 	dataDict = {}

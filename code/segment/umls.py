@@ -12,8 +12,8 @@ import random
 import os
 import requests
 from multiprocessing import Pool
-from segment.tool import uniqueList, removeBracket, removeBeginEnd, sortedByLength, containUselessDigitTerm
-from segment.tool import  termListStatic, removeStopwords, removeUselessSpace, containCNS, allCNS, allDigit
+from common import uniqueList, removeBracket, removeBeginEnd, sortedByLength, containUselessDigitTerm
+from common import  termListStatic, removeStopwords, removeUselessSpace, containCNS, allCNS, allDigit
 from common import dictListAdd
 from config import DATA_PATH, RESULT_PATH
 from script.wiki import readWikiTermList

@@ -7,8 +7,8 @@
 
 from tqdm import tqdm
 import re
-from segment.tool import removeBracket, uniqueList, removeBeginEnd, sortedByLength, allDigit
-from segment.tool import removeStopwords, removeUselessSpace, containPunc, containUselessDigitTerm
+from common import removeBracket, uniqueList, removeBeginEnd, sortedByLength, allDigit
+from common import removeStopwords, removeUselessSpace, containPunc, containUselessDigitTerm
 
 
 def genSegmentTermList(termList):

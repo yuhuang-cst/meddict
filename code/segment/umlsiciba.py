@@ -9,8 +9,8 @@ import os
 from tqdm import tqdm
 import re
 from config import DATA_PATH, RESULT_PATH
-from segment.tool import uniqueList, removeBeginEnd, sortedByLength, containCNS, allDigit
-from segment.tool import removeStopwords, removeUselessSpace, containPunc, containUselessDigitTerm
+from common import uniqueList, removeBeginEnd, sortedByLength, containCNS, allDigit
+from common import removeStopwords, removeUselessSpace, containPunc, containUselessDigitTerm
 
 
 def isDescription(term):

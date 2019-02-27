@@ -10,8 +10,8 @@ import re
 from tqdm import tqdm
 from config import DATA_PATH, RESULT_PATH
 from analyzer.StandardAnalyzer import StandardAnalyzer
-from segment.tool import removeBracket, uniqueList, removeBeginEnd, sortedByLength, containCNS, allDigit, allCNS
-from segment.tool import removeStopwords, removeUselessSpace, containPunc, containUselessDigitTerm
+from common import removeBracket, uniqueList, removeBeginEnd, sortedByLength, containCNS, allDigit, allCNS
+from common import removeStopwords, removeUselessSpace, containPunc, containUselessDigitTerm
 
 def genBGUnorderEqual():
 	"""取百度翻译和谷歌翻译无序相等

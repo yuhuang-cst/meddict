@@ -8,8 +8,8 @@
 import numpy as np
 from tqdm import tqdm
 import re
-from segment.tool import removeBracket, uniqueList, removeBeginEnd, sortedByLength, containCNS, allDigit
-from segment.tool import removeStopwords, removeUselessSpace, containPunc, containUselessDigitTerm
+from common import removeBracket, uniqueList, removeBeginEnd, sortedByLength, containCNS, allDigit
+from common import removeStopwords, removeUselessSpace, containPunc, containUselessDigitTerm
 
 def genSnomedctSegment(termList):
 	termList = uniqueList([removeUselessSpace(term) for term in termList]) # 去除无用空白符
