@@ -6,7 +6,7 @@
 `result/segment/thesaurus`文件夹下：
 
 - `hpo.txt`：来自[HPO（官方）](http://www.chinahpo.org/)
-- `icd10_gov.txt`：来自[ICD10（官方）](http://www.moh.gov.cn/mohbgt/s6694/201202/54033.shtml)
+- `icd10_gov.txt`：来自[ICD10（官方）](http://www.nhc.gov.cn/mohwsbwstjxxzx/s8553/201202/54034.shtml)
 - `mesh.txt`：来自自[MeSH（非官方）](http://chisc.net/doc/view/9270.html)
 - `snomed.txt`：来自[SNOMED（官方）](http://mall.cnki.net/reference/detail_R200908044.html)
 - `snomedct.txt`：来自[SNOMED（非官方）](http://chisc.net/doc/view/5201.html)

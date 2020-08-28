@@ -128,7 +128,12 @@ class SimpleMTGenerator(MTGenerator):
 	def genMT(self):
 		"""
 		Returns:
-			dict: {AUI: {'eng': eng, 'source': {source: cns}}}
+			dict: {
+				AUI: {
+				'eng': eng,
+				'source': {source: cns}
+				}
+			}
 		"""
 		allMapDict = {}
 		priorityMapperList = [
@@ -254,16 +259,22 @@ class GradedMT(MTGenerator):
 					retDict[AUI]['preferSource'] = GOOGLE_SOURCE
 					retDict[AUI]['prefer'] = retDict[AUI]['source'][GOOGLE_SOURCE]
 
-		print('making statistics...')
-		countDict = {i:0 for i in range(1, 7)}
-		for AUI in retDict:
-			countDict[retDict[AUI]['confidence']] += 1
-		for confidence in countDict:
-			print('confidence %d: %d/%d, %f' % (confidence, countDict[confidence], len(retDict), countDict[confidence] * 1.0 / len(retDict)))
-		self.printManualCUICoverRate(retDict)
-		self.printManualAUICoverRate(retDict)
+		auiMapUmlsTerm = self.getAUIMapUmlsTerm()
+		self.addUmlsTerm(retDict, auiMapUmlsTerm)
+		self.statistic(retDict)
 
 		return retDict
+
+
+	def statistic(self, mtDict):
+		print('making statistics...')
+		countDict = {i:0 for i in range(1, 7)}
+		for AUI in mtDict:
+			countDict[mtDict[AUI]['confidence']] += 1
+		for confidence in countDict:
+			print('confidence %d: %d/%d, %f' % (confidence, countDict[confidence], len(mtDict), countDict[confidence] * 1.0 / len(mtDict)))
+		self.printManualCUICoverRate(mtDict)
+		self.printManualAUICoverRate(mtDict)
 
 
 

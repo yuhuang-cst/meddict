@@ -33,6 +33,7 @@ class BaiduConfig(TranslateConfig):
 class GoogleCNConfig(TranslateConfig):
 	def __init__(self):
 		super(GoogleCNConfig, self).__init__()
+		self.SLICE_LENGTH = 100
 
 
 def divideListJson(inputJson, sliceLen, folder):
@@ -157,10 +158,10 @@ if __name__ == '__main__':
 		tlconfig = GoogleCNConfig()
 		inputJson = DATA_PATH+'/umlsMT/translate/termENG.json'
 		outputJson = DATA_PATH+'/umlsMT/translate/termCNSGoogle.json'
-		translate(API, inputJson, outputJson, c=tlconfig, trace=True)
-		statistic(inputJson, outputJson)
-		# update(API, inputJson, outputJson, lambda inTerm, outTerm: transFailed(inTerm, outTerm), c=tlconfig)
+		# translate(API, inputJson, outputJson, c=tlconfig, trace=False)
 		# statistic(inputJson, outputJson)
+		update(API, inputJson, outputJson, lambda inTerm, outTerm: transFailed(inTerm, outTerm), c=tlconfig)
+		statistic(inputJson, outputJson)
 
 	def baidu():
 		print('Baidu Translate...')
@@ -168,10 +169,10 @@ if __name__ == '__main__':
 		tlconfig = BaiduConfig()
 		inputJson = DATA_PATH+'/umlsMT/translate/termENG.json'
 		outputJson = DATA_PATH+'/umlsMT/translate/termCNSBaidu.json'
-		translate(API, inputJson, outputJson, c=tlconfig, trace=False)
-		statistic(inputJson, outputJson)
-		# update(API, inputJson, outputJson, lambda inTerm, outTerm: transFailed(inTerm, outTerm), c=tlconfig)
+		# translate(API, inputJson, outputJson, c=tlconfig, trace=False)
 		# statistic(inputJson, outputJson)
+		update(API, inputJson, outputJson, lambda inTerm, outTerm: transFailed(inTerm, outTerm), c=tlconfig)
+		statistic(inputJson, outputJson)
 
 	def googleUpdate():
 		print('Google Update...')
@@ -187,9 +188,10 @@ if __name__ == '__main__':
 		statistic(inputJson, outputJson)
 
 	pass
-	google()
-	# baidu()
+	# google()
+	baidu()
 	# googleUpdate()
+
 
 
 
